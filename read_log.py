@@ -18,8 +18,7 @@ if __name__  == "__main__":
             l_url_id    = columns[5]
             l_ip        = columns[8]
             l_ip_addr   = l_ip.strip('""')
-
-            #if '/xmlpserver/servlet/xdo?_xdo=&#37;2FPHAN_HE_GL&#37;2FReports&#37;2FGL002F.xdo&amp;fromLoadingPage=true&amp;_id=fd5104b8-1461-4ff6-98a4-b9e0cad57a32' not in l_url_id:
+            
             if 'PHAN_HE' not in l_url_id:
                 l_url_id = None
                 #print(type(l_url_id))
@@ -38,7 +37,7 @@ if __name__  == "__main__":
 
 #insert database
 try: 
-    connection = cx_Oracle.connect('dwprod/oracle123@192.168.49.32:1521/uatdwh')  
+    connection = cx_Oracle.connect('')  
 #execute the sqlquery 
     cursor = connection.cursor() 
     #insert theo biến      
